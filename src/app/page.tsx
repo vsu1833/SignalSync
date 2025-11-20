@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
@@ -6,17 +9,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">A</span>
+              <span className="text-white font-bold text-xl">S</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">Aarth Saarthi</span>
+            <span className="text-xl font-bold text-gray-900">SignalSync</span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a href="#features" className="text-gray-600 hover:text-gray-900 transition">Features</a>
             <a href="#how-it-works" className="text-gray-600 hover:text-gray-900 transition">How It Works</a>
             <a href="#about" className="text-gray-600 hover:text-gray-900 transition">About</a>
-            <button className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition">
-              Get Started
-            </button>
+            <Link href="/login" className="text-gray-600 hover:text-gray-900 transition font-medium">
+              Sign In
+            </Link>
+            <Link href="/signup" className="px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition font-medium">
+              Sign Up
+            </Link>
           </div>
         </div>
       </nav>
@@ -30,19 +36,17 @@ export default function Home() {
                 SEPTEMBER 2025
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Institutional-Grade
-                <span className="text-gradient"> AI Trading</span>
-                <br />for Retail Investors
+                Institutional-grade investing for retail investors
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Empowering retail investors with hedge fund-grade capabilities through multi-agent AI architecture, combining expert analysis, trading strategies, and risk management.
+                Multi-agent AI that analyzes markets, predicts trends, and recommends portfolio actions - with transparent explanations and user-centric controls.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="px-8 py-4 bg-primary text-white rounded-lg hover:bg-primary-dark transition text-lg font-medium">
-                  Start Investing
+                  Get started - it's free
                 </button>
                 <button className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-primary hover:text-primary transition text-lg font-medium">
-                  Learn More
+                  Request a demo
                 </button>
               </div>
               <div className="mt-8 flex items-center space-x-6 text-sm text-gray-500">
@@ -61,25 +65,14 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gradient-to-br from-primary to-primary-dark rounded-2xl p-8 shadow-2xl">
-                <div className="bg-white rounded-xl p-6 mb-4">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-sm text-gray-500">Portfolio Value</span>
-                    <span className="text-green-500 text-sm font-medium">+12.4%</span>
-                  </div>
-                  <div className="text-3xl font-bold text-gray-900">$1,876,580</div>
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
-                    <div className="text-sm opacity-80 mb-1">AI Agents Active</div>
-                    <div className="text-2xl font-bold">7</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white">
-                    <div className="text-sm opacity-80 mb-1">Success Rate</div>
-                    <div className="text-2xl font-bold">94%</div>
-                  </div>
-                </div>
-              </div>
+              <Image
+                src="/images/landing_image.png"
+                alt="SignalSync Analytics Dashboard"
+                width={600}
+                height={400}
+                className="w-full h-auto"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -277,7 +270,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <span className="text-primary font-semibold text-sm uppercase tracking-wide">OUR IMPACT</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6">
-              Why investors prefer Aarth Saarthi
+              Why investors prefer SignalSync
             </h2>
           </div>
 
@@ -351,9 +344,9 @@ export default function Home() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">A</span>
+                  <span className="text-white font-bold text-xl">S</span>
                 </div>
-                <span className="text-xl font-bold">Aarth Saarthi</span>
+                <span className="text-xl font-bold">SignalSync</span>
               </div>
               <p className="text-gray-400 text-sm">
                 Empowering retail investors with institutional-grade AI analysis.
@@ -389,7 +382,7 @@ export default function Home() {
           </div>
           
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">© 2025 Aarth Saarthi. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">© 2025 SignalSync. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white transition">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
