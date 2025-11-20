@@ -499,13 +499,6 @@ export default function DashboardPage() {
                     </button>
                   </div>
                 </div>
-                <p
-                  className={`text-xs mt-2 text-center ${
-                    isDarkMode ? "text-gray-500" : "text-gray-500"
-                  }`}
-                >
-                  Move canvas, hold Scroll, Spacebar, or use the menu tool
-                </p>
               </form>
             </div>
           </div>
